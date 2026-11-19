@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Platinum — GTA VI Trophy Guide &amp; Tracker</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="top-inner">
+    <div class="brand">
+      <div class="brand-mark" aria-hidden="true">VI</div>
+      <div>
+        <h1>Leonida Platinum</h1>
+        <p class="subtitle">GTA VI trophy guide &amp; tracker — all 55 PlayStation 5 trophies, offline</p>
+      </div>
+    </div>
+    <div class="hero-counts" id="heroCounts" aria-label="Trophy totals">
+      <span class="medal platinum" title="Platinum">1 Platinum</span>
+      <span class="medal gold" title="Gold">2 Gold</span>
+      <span class="medal silver" title="Silver">6 Silver</span>
+      <span class="medal bronze" title="Bronze">46 Bronze</span>
+    </div>
+  </div>
+  <div class="progress-wrap">
+    <div class="progress-line">
+      <strong id="progressText">0 / 55 earned</strong>
+      <span id="progressPct">0%</span>
+      <span class="progress-note" id="progressByGrade"></span>
+    </div>
+    <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="55" aria-valuenow="0" id="progressBar"><div class="progress-fill" id="progressFill"></div></div>
+  </div>
+</header>
+
+<nav class="tabs" aria-label="Views">
+  <button class="tab active" data-view="checklist" type="button">Checklist</button>
+  <button class="tab" data-view="roadmap" type="button">Roadmap to Platinum</button>
+  <button class="tab" data-view="missables" type="button">Missables <span class="tab-badge" id="missableCount"></span></button>
+</nav>
+
+<section class="toolbar" aria-label="Filters and tools">
+  <label class="search-box">
+    <span class="sr-only">Search trophies</span>
+    <input type="search" id="searchInput" placeholder="Search a trophy, mission or keyword…" autocomplete="off">
+  </label>
+  <div class="chips" id="kindChips" role="group" aria-label="Filter by kind">
+    <button class="chip active" data-kind="all" type="button">All</button>
+    <button class="chip" data-kind="story" type="button">Story</button>
+    <button class="chip" data-kind="missable" type="button">Missable</button>
+    <button class="chip" data-kind="collectible" type="button">Collectibles</button>
+    <button class="chip" data-kind="activity" type="button">Activities</button>
+    <button class="chip" data-kind="money" type="button">Money</button>
+    <button class="chip" data-kind="online" type="button">Online</button>
+  </div>
+  <label class="grade-filter">Grade
+    <select id="gradeSelect">
+      <option value="all">All grades</option>
+      <option value="platinum">Platinum</option>
+      <option value="gold">Gold</option>
+      <option value="silver">Silver</option>
+      <option value="bronze">Bronze</option>
+    </select>
+  </label>
+  <label class="toggle">
+    <input type="checkbox" id="spoilerToggle">
+    <span>Hide story spoilers</span>
+  </label>
+  <label class="toggle">
+    <input type="checkbox" id="earnedOnlyToggle">
+    <span>Earned only</span>
+  </label>
+  <div class="tools">
+    <button id="exportBtn" type="button">Export progress</button>
+    <button id="importBtn" type="button">Import progress</button>
+    <input type="file" id="importFile" accept="application/json,.json" hidden>
+    <button id="resetBtn" type="button" class="danger">Reset</button>
+  </div>
+</section>
+
+<main class="layout">
+  <section class="list-col" aria-label="Trophy list">
+    <p class="list-meta" id="listMeta"></p>
+    <ul class="trophy-list" id="trophyList"></ul>
+    <p class="empty-note" id="emptyNote" hidden>No trophies match these filters. Try clearing the search or picking another kind.</p>
+  </section>
+
+  <aside class="detail-col" aria-label="Trophy guide" id="detailPane">
+    <p class="detail-hint">Pick a trophy on the left to read its guide and sources here.</p>
+  </aside>
+</main>
+
+<section class="view-page" id="roadmapPage" hidden>
+  <h2>Roadmap to the platinum</h2>
+  <p class="page-intro">Built from the official trophy descriptions alone. Play in this order and the platinum follows: story first, missables as they appear, then the side strands, then the long counters — with 100% Completion as the last step before the platinum pops.</p>
+  <ol class="roadmap" id="roadmapList"></ol>
+</section>
+
+<section class="view-page" id="missablesPage" hidden>
+  <h2>Missable trophies — do these when the moment comes</h2>
+  <p class="page-intro">13 of the 55 trophies are flagged missable: their descriptions name a single specific moment, setup or choice. Save before you attempt one, and do it the first time the chance appears — a second playthrough may be the only way back. Every other trophy is repeatable or story-guaranteed.</p>
+  <ul class="missable-list" id="missableList"></ul>
+</section>
+
+<footer class="foot">
+  <p><strong>Sources.</strong> Every trophy's name, description and grade come from the official list on <span class="src">Exophase — Grand Theft Auto VI trophies</span> and <span class="src">PSNProfiles — Grand Theft Auto VI trophies</span>. Every guide is written in my own words from that official description; where the description does not pin down a place or a step, the guide says so plainly instead of inventing one.</p>
+  <p>Works fully offline: this app loads nothing from the network. Progress is saved only in your browser (localStorage) and can be exported or imported with the buttons above. No Rockstar Games logo, artwork or game screenshots are used here — the look is my own.</p>
+  <p class="foot-small">Leonida Platinum — an unofficial fan guide for Grand Theft Auto VI on PlayStation 5. Grand Theft Auto and Rockstar Games are trademarks of their owners; this guide is not affiliated with or endorsed by them.</p>
+</footer>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
